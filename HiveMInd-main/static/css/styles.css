@@ -1,0 +1,174 @@
+*{
+    margin: 0px;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    
+}
+h2{
+    font-family: "Montserrat-Bold";
+    font-size: 3rem;
+    line-height: 1.5;
+} 
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a :hover{
+     color: #000000;
+}
+
+button :hover{
+    color: #000000;
+
+}
+h3{
+    font-family: "Montserrat";
+}
+p{
+    color: #8f8f8f;
+}
+body{
+    font-family: "Montserrat";
+}
+.landing{
+    background-color:#609966;
+    color:#fff; 
+    height: 100vh;
+}
+.hivemind-nav{
+    padding: 4rem 10rem;
+} 
+.navbar-brand{
+   font-family:"Ubuntu"; 
+   font-size: 3.5rem;
+   font-weight: bold;
+}
+.nav-item{
+    padding: 0 18px;
+}
+.nav-link{
+    font-size: 1.2rem;
+    font-family: "Montserrat-light";
+}
+.landing > .landing-page-content{
+    display: flex;
+    margin-top: 50px;
+}
+.landing > .landing-page-content>.content{
+    padding: 20px 50px;
+    margin-left: 120px;
+    width: 50%;
+}
+
+.download-button{
+    margin: 5% 3% 5% 0;
+}
+.hive{
+    font-size: 4em;
+}
+ 
+.title-image {
+    width: 20%;
+    top: 45%;
+    transform: rotate(25deg);
+    position: absolute;
+    right:15%;
+    
+} 
+/* Features Section */
+
+#features{
+    padding: 7% 15%;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+
+}
+.feature-box{
+    text-align: center;
+    padding: 5%
+
+}
+.icon{
+    color:#609966;
+    margin-bottom:1rem;
+
+}
+.icon:hover{
+    color:#40513B;
+    
+}
+/* Testimonials */
+#testimonials{
+    
+    text-align: center;
+    background-color:#609966;
+    color:#fff;   
+}
+.carousel-item{
+    padding:7% 15%;
+}
+.testimonial-image{
+    width:10%;
+    border-radius: 100%;
+    margin:20px;
+}
+#press{
+    background-color:#609966;
+    text-align: center;
+    padding-bottom: 3%;
+}
+.press-logo{
+    width:15%;
+    margin: 20px 20px 50px;
+}
+
+.carousel-inner{
+    background-color: #609966;
+}
+/* Pricing section */
+#pricing{
+    padding:100px;
+    text-align: center;
+}
+.pricing-column{
+    padding:3% 2%;
+}
+
+@media (max-width:1028px) {
+
+    #title{
+        text-align: center;
+    }
+    .title-image {
+        position : static;
+        transform: rotate(0);
+        width:50%;
+    }
+    /* .hivemind-nav{
+        margin-left: 0.5rem;
+    } */
+}
+#cta{
+    background-color: #609966;
+    padding:30px;
+    text-align: center;
+}
+h3{
+    font-family: "Montserrat-Black";
+    color:white;
+    
+}
+#footer{
+    padding-top:30px;
+    text-align: center;
+}
+
+/* .hivemind-nav{
+    margin-left: -180px;
+} */
