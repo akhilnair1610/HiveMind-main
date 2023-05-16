@@ -1,0 +1,18 @@
+.formBox {
+    position: relative;
+    text-align: center;
+    padding-top: 200px;
+    font-size: 2rem;
+}
+
+body {
+    background: url("D:\Downloads\HiveMInd-main\HiveMInd-main\static\images\download.jpeg")no-repeat;
+}
+
+h1 {
+    color: white;
+}
+
+.form {
+    color: white;
+}

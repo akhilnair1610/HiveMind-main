@@ -1,23 +1,18 @@
-from tkinter import *
-from tkinter import simpledialog
-main_win = Tk()
+
+
 
 def Weight_Loss():
-    print(" Age : %s Years \n Weight: %s Kg \n Hight: %s m \n" % (e1.get(), e3.get(), e4.get()))
+    print(" Age : %s Years \n Weight: %s Kg \n Hight: %s m \n" )
     
     import pandas as pd
     import numpy as np
     from sklearn.cluster import KMeans
-    import tkinter as tk
-    
+ 
     
     ROOT = tk.Tk()
     
     ROOT.withdraw()
-    
-    USER_INP = simpledialog.askstring(title="Food Timing",
-                                      prompt="Enter 1 for Breakfast, 2 for Lunch and 3 for Dinner")
-    
+
     
     data=pd.read_csv('input.csv')
     
@@ -73,10 +68,10 @@ def Weight_Loss():
     DinnerfoodseparatedIDdata=DinnerfoodseparatedIDdata.iloc[Valapnd]
     DinnerfoodseparatedIDdata=DinnerfoodseparatedIDdata.T
     
-    age=int(e1.get())
-    weight=float(e3.get())
-    height=float(e4.get())
-    bmi = weight/(height**2) 
+   # age=int(e1.get())
+   # weight=float(e3.get())
+    #height=float(e4.get())
+   # bmi = weight/(height**2) 
     
     for lp in range (0,80,20):
         test_list=np.arange(lp,lp+20)
@@ -231,15 +226,12 @@ def Weight_Gain():
     import pandas as pd
     import numpy as np
     from sklearn.cluster import KMeans
-    import tkinter as tk
+
     
-    ROOT = tk.Tk()
+  
     
-    ROOT.withdraw()
+  
    
-    USER_INP = simpledialog.askstring(title="Food Timing",
-                                      prompt="Enter 1 for Breakfast, 2 for Lunch and 3 for Dinner")
-    
     data=pd.read_csv('input.csv')
     data.head(5)
     Breakfastdata=data['Breakfast']
@@ -414,7 +406,7 @@ def Weight_Gain():
     
     from sklearn.model_selection import train_test_split
     
-    val=int(USER_INP)
+
     
     if val==1:
         X_train= weightgainfin
@@ -451,20 +443,15 @@ def Weight_Gain():
             
 
 def Healthy():
-    print(" Age: %s\n Weight%s\n Hight%s\n" % (e1.get(), e3.get(), e4.get()))
+    print(" Age: %s\n Weight%s\n Hight%s\n" )
+          #add weight,height)
     import pandas as pd
     import numpy as np
     
     from sklearn.cluster import KMeans
-    import tkinter as tk
     
-    ROOT = tk.Tk()
     
-    ROOT.withdraw()
-   
-    USER_INP = simpledialog.askstring(title="Food Timing",
-                                      prompt="Enter 1 for Breakfast, 2 for Lunch and 3 for Dinner")
-    
+
     
     data=pd.read_csv('input.csv')
     data.head(5)
@@ -518,9 +505,9 @@ def Healthy():
     DinnerfoodseparatedIDdata=DinnerfoodseparatedIDdata.iloc[Valapnd]
     DinnerfoodseparatedIDdata=DinnerfoodseparatedIDdata.T
     
-    age=int(e1.get())
-    weight=float(e3.get())
-    height=float(e4.get())
+    age=int(input())
+    weight=float(input())
+    height=float(input())
     bmi = weight/(height**2) 
     agewiseinp=0
     
@@ -637,7 +624,6 @@ def Healthy():
     from sklearn.model_selection import train_test_split
     
 
-    val=int(USER_INP)
     
     if val==1:
         X_train= healthycatfin
@@ -668,24 +654,3 @@ def Healthy():
         if y_pred[ii]==2:
             print (Food_itemsdata[ii])
 
-Label(main_win,text="Age",font='Helvetica 12 bold').grid(row=1,column=0,sticky=W,pady=4)
-Label(main_win,text="Weight",font='Helvetica 12 bold').grid(row=2,column=0,sticky=W,pady=4)
-Label(main_win,text="Height", font='Helvetica 12 bold').grid(row=3,column=0,sticky=W,pady=4)
-
-e1 = Entry(main_win,bg="light grey")
-e3 = Entry(main_win,bg="light grey")
-e4 = Entry(main_win,bg="light grey")
-e1.focus_force() 
-
-e1.grid(row=1, column=1)
-e3.grid(row=2, column=1)
-e4.grid(row=3, column=1)
-
-
-Button(main_win,text='Quit',font='Helvetica 8 bold',command=main_win.quit).grid(row=5,column=0,sticky=W,pady=4)
-Button(main_win,text='Weight Loss',font='Helvetica 8 bold',command=Weight_Loss).grid(row=1,column=4,sticky=W,pady=4)
-Button(main_win,text='Weight Gain',font='Helvetica 8 bold',command=Weight_Gain).grid(row=2,column=4,sticky=W,pady=4)
-Button(main_win,text='Healthy',font='Helvetica 8 bold',command=Healthy).grid(row=3,column=4,sticky=W,pady=4)
-main_win.geometry("400x200")
-main_win.wm_title("DIET RECOMMENDATION SYSTEM")
-main_win.mainloop()
